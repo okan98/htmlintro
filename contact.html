@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktformulär</title>
+</head>
+<body>
+    
+    <header>
+        Ett sidhuvud - webbplatsen identitet, ex en bild...
+    </header>
+
+    <nav>
+
+        <!-- elementet pre - preformatted - ser till att blnaksteg kan skrivas efter varandra... -->
+        <pre></pre>
+            <!-- skapa länkar för att navigera mellan olika sidor -->
+
+            <!-- teknet &nbsp; non breaking space - kan användas i html för 'lite luft'  -->
+            <a href="index.html">Startsida</a> &nbsp;|&nbsp; <a href="birds.html">Om fåglar</a> &nbsp;|&nbsp; <a href="contact.html">Kontakt oss</a> 
+
+    </nav>
+
+    <h1>Kontakta gärna oss via formuläret</h1>
+
+
+    <!-- elementet form avnänds för att skapa forumlär - olika fält... -->
+    <!-- method post ska användas så långt som möjligt - med extension Live server genereras ett http 405 fel tyvärr... -->
+    <!-- method get ska undvikas, men kan användas för att testa applikationen. OBS - input type="password" skickas i klartetxt = väldigt tråkigt...!!! -->
+    <form action="#" method="get">
+
+
+        <!-- vissa fält kan man göra till obligatoriska - attributet required -->
+
+        <p>
+            <!-- ett element som är tänkt att vara ledtext till formulärfält ät label -->
+            <label for="first_name">Ditt förnamn:</label><br>
+            <input type="text" name="first_name" id="first_name">    
+        </p>
+
+        <p>
+            <label for="last_name">Ditt efternamn:</label><br>
+            <input type="text" name="last_name" id="last_name">    
+        </p>
+        
+        <p>
+            <!-- alternativt sätt att använda label element utan for attribut -->
+            <!-- se https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label -->
+            <label>Ange e-post: <br>
+                <input type="email" name="email" id="email" required>
+            </label>
+        </p>
+
+        <p>
+            <!-- önskat användarnanm...username, med attributet placeholder kan man ev skippa ledtext... -->
+            <!-- ange att fältet är obligatorisk - attributet required -->
+
+            <!-- fältets längd: minst ex 4 tecken -->
+            <input type="text" name="username" id="username" placeholder="Ditt användarnamn" required minlength="4" maxlength="8">
+        </p>
+
+
+        <!-- testa att skapa minst 2 olika fält som inte har samma type värde som vi kodat... -->
+
+        <!-- ... vi kodar igen gemensamt kl 11:15 -->
+
+        <p>
+            <label for="password">Ange lösenord</label> <br>
+            <input type="password" name="password" id="password">
+        </p>
+
+
+        <p>
+            <label for="color">Ange din favoritfärg:</label>
+            <input type="color" name="color" id="color">
+        </p>
+
+        <p>
+            <label for="datetime">Bästa dagen på året är...</label> <br>
+            <input type="datetime-local" name="datetime" id="datetime">
+        </p>
+
+        <!-- ett formulärelement som tillåter större textmängd (inkl radbrytning) är textarea -->
+        <p>
+            Berätta om dig själv - personligt brev<br>
+            <textarea name="letter" id="letter" cols="30" rows="10"></textarea>
+        </p>
+
+        <!-- ett element som används för att att peka ut ngt i en lista - kallas för select-option -->
+
+        <p>
+            Vilka språk föredrar du: (du kan makera flera val i listan) <br>
+
+            <!-- uppgift - ta reda på om man kan markera flera olika val i en select option lista -->
+            <!-- tips: sök  html select option  (mdn, w3c, w3schools ... )-->
+            <!-- skriv era svar i chatten - Nearby ... -->
+            <select name="languages" id="languages" multiple size="3">
+                <option value="html">HTML - HyperText Markup Language</option>
+                <option value="swedish">Svenska</option>
+                <option value="english">Engelska</option>
+                <option value="secret">Rövarspråket</option>
+            </select>
+        </p>
+
+
+        <input type="submit" value="Skicka">
+
+    </form>
+
+
+    <footer>
+
+    </footer>
+
+</body>
+</html>
