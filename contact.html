@@ -105,10 +105,48 @@
 
 
         <input type="submit" value="Skicka">
+        <input type="reset" value="Nollställ">
+        <button type="reset">Börja om</button>
 
     </form>
+    <hr>
+
+    <form action="" method="get" id="newsletter">
+        <h3>Intresserad av nyhetsbrev?</h3>
+        <p>
+            webbplatsn kan ge dig återkommande info i form av ett nyhetsbrev - anmäl dig här
+        </p>
+
+        <p>
+             <input type="email" name="email" id="email"required placeholder="Ange-epost adress för nyhetsbrev" size="50"> 
+        </p>
+       
+
+        <!-- uppgift hur kan man skapa en ledtext till elementet fieldset -->
+        <fieldset>
+            <legend>Vilka husdjur är du intressserad av</legend>
+
+     <div>
+        <input type="checkbox" name="pets_dogs" id="pets_dogs">
+        <label for="pets_dogs">Hund</label>
+    </div>
+
+       <div>
+        <input type="checkbox" name="pets_dogs" id="pets_dogs">
+        <label for="pets_dogs">Katt</label>
+    </div>
+    <div>
+        <input type="checkbox" name="pets_squirels" id="pets_squirels">
+        <label for="pets_dogs">Ekorre</label>
+    </div>
+    </fieldset>
 
 
+        <p>
+            <button type="submit">jag vill få nyheter från webbplats</button>
+        </p>
+
+       
     <footer>
 
     </footer>
